@@ -25,7 +25,6 @@ body{
 }
 
 .app__header > h1 {
-  color: #fc3c3c;
   font-size: 2rem;
 }
 
@@ -43,6 +42,15 @@ body{
 .app__stats {
   display: flex;
   justify-content: space-between;
+}
+
+.app__footer{
+  text-align: center;
+}
+.app__footer > h4{
+  font-weight: 200;
+  bottom: 0px;
+  margin-top: 20px;
 }
 
 @media (max-width: 990px) {

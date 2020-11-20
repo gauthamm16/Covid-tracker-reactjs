@@ -69,6 +69,7 @@ const App = () => {
   };
 
   return (
+    <>
     <div className="app">
       <div className="app__left">
         <div className="app__header">
@@ -88,6 +89,7 @@ const App = () => {
         </div>
         <div className="app__stats">
           <Infobox
+            isRed
             onClick={(e) => setCasesType("cases")}
             title="Coronavirus Cases"
             isRed
@@ -103,6 +105,7 @@ const App = () => {
             total={numeral(countryInfo.recovered).format("0.0a")}
           />
           <Infobox
+            isRed
             onClick={(e) => setCasesType("deaths")}
             title="Deaths"
             isRed
@@ -125,13 +128,17 @@ const App = () => {
         <div className="app__information">
             <h3>Live Cases by Country</h3>
             <Table countries={tableData} />
-            <h3>Worldwide new cases</h3>
-              <LineGraph />
+            <h3>Worldwide new {casesType}</h3>
+              <LineGraph casesType={casesType}/>
           </div>
         </CardContent>
       </Card>
 
     </div>
+    <div className="app__footer">
+      <h4>Made with ❤️ by Gautham Menon</h4>
+    </div>
+    </>
   );
 }
 

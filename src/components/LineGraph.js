@@ -63,7 +63,7 @@ for (let date in data.cases) {
 return chartData;
 };
 
-function LineGraph({ casesType = "cases" }) {
+function LineGraph({ casesType }) {
 const [data, setData] = useState({});
 
 useEffect(() => {
