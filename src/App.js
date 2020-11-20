@@ -136,7 +136,7 @@ const App = () => {
 
     </div>
     <div className="app__footer">
-      <h4>Made with ❤️ by Gautham Menon</h4>
+      <h4>Made with ❤️  by Gautham Menon</h4>
     </div>
     </>
   );
